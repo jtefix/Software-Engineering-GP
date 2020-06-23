@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox fx:id="glossaryVBox" alignment="CENTER" prefHeight="574.0" prefWidth="770.0" snapToPixel="false" style="-fx-border-width: 25; -fx-border-color: ff6347; -fx-border-opacity: 50;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Control.JavaFX.GlossaryGUIController">
+   <HBox alignment="CENTER" prefHeight="91.0" prefWidth="720.0">
+      <children>
+          <JFXButton fx:id="clearButton" alignment="CENTER" blendMode="DARKEN" buttonType="RAISED" contentDisplay="TOP" mnemonicParsing="false" onAction="#clearSearch" prefHeight="76.0" prefWidth="525.0" ripplerFill="#4d2542" style="-fx-font-size: 12; -fx-font-family: &quot;Marlett&quot;; -jfx-button-type: &quot;RAISED&quot;; -fx-background-color: white;" text="Clear">
+            <graphic>
+                <JFXTextField fx:id="searchField" onKeyReleased="#searchEvent" prefHeight="26.0" prefWidth="475.0" text="Search" />
+            </graphic>
+         </JFXButton>
+      </children>
+   </HBox>
+
+
+    <TableView fx:id="tableview" layoutX="25.0" layoutY="15.0" prefHeight="290.0" prefWidth="548.0">
+    </TableView>
+</VBox>

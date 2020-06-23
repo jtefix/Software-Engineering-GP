@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXTabPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane minHeight="-Infinity" minWidth="900.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Control.JavaFX.MainController">
+    <children>
+        <JFXTabPane fx:id="tabPane" blendMode="DARKEN" stylesheets="@Main.css" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <tabs>
+                <Tab fx:id="importTab" closable="false" style="-fx-border-length: 1000;" text="Import">
+                    <fx:include source="ImportGUI.fxml" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                </Tab>
+                <Tab fx:id="campaignSummaryTab" disable="true" text="Campaign Summary">
+                    <fx:include source="CampaignSummaryGUI.fxml" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                </Tab>
+                <Tab fx:id="metricGraphsTab" disable="true" text="Metric Graphs">
+                    <fx:include source="MetricGraphsGUI.fxml" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                </Tab>
+                <Tab fx:id="histogramTab" disable="true" text="Histogram">
+                    <fx:include source="HistogramGUI.fxml" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                </Tab>
+                <Tab fx:id="glossaryTab" disable="true" text="Glossary">
+                    <content>
+                        <fx:include source="GlossaryGUI.fxml" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                    </content>
+                </Tab>
+                <Tab fx:id="exportTab" disable="true" text="Export">
+                    <content>
+                        <fx:include source="ExportGUI.fxml" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                    </content>
+                </Tab>
+                <Tab fx:id="appearanceTab" disable="true" text="Customise Application">
+                    <content>
+                        <fx:include source="AppereanceGUI.fxml" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                    </content>
+                </Tab>
+            </tabs>
+        </JFXTabPane>
+    </children>
+</AnchorPane>

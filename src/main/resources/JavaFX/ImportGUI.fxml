@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXSpinner?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox fx:id="importVBox" alignment="CENTER" snapToPixel="false" style="-fx-border-width: 25; -fx-border-color: ff6347; -fx-border-opacity: 50;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Control.JavaFX.ImportGUIController">
+   <children>
+      <Label fx:id="logLabel" alignment="CENTER" layoutX="91.0" layoutY="348.0" prefHeight="198.0" prefWidth="724.0" style="-fx-font-size: 24; -fx-font-family: &quot;Marlett&quot;;" text="Import Files to Load" textAlignment="CENTER" textFill="#303030">
+         <font>
+            <Font size="8.0" />
+         </font></Label>
+      <JFXSpinner fx:id="spinner" visible="false" />
+      <GridPane fx:id="GridPane" alignment="CENTER" style="-fx-padding: 20;">
+         <Label fx:id="clicksLabel" layoutX="99.0" layoutY="236.0" prefHeight="27.0" prefWidth="548.0" style="-fx-font-size: 20; -fx-font-family: &quot;Marlett&quot;;" text="Clicks CSV:" textFill="#505050" GridPane.columnIndex="1" />
+         <JFXButton fx:id="clicksButton" alignment="CENTER" blendMode="DARKEN" buttonType="RAISED" contentDisplay="TOP" mnemonicParsing="false" onAction="#openClickCSV" prefHeight="35.0" prefWidth="157.0" ripplerFill="#4d2542" style="-fx-font-size: 20; -fx-font-family: &quot;Marlett&quot;; -jfx-button-type: &quot;RAISED&quot;; -fx-background-color: white;" text="Clicks" textAlignment="CENTER" textFill="#5e5e5e" textOverrun="CLIP" GridPane.columnIndex="2">
+            <font>
+               <Font name="Marlett" size="11.0" />
+            </font>
+            <cursor>
+               <Cursor fx:constant="HAND" />
+            </cursor>
+            <effect>
+               <Glow />
+            </effect>
+            <GridPane.margin>
+               <Insets bottom="15.0" left="5.0" right="5.0" top="15.0" />
+            </GridPane.margin></JFXButton>
+         <!--         <Button layoutX="490.0" layoutY="175.0" mnemonicParsing="false" onAction="#openServerCSV" prefHeight="25.0" prefWidth="100.0" style="-fx-font-family: &quot;Courier New&quot;;" text="Server" GridPane.columnIndex="1" />-->
+         <Label fx:id="impressionsLabel" layoutX="99.0" layoutY="319.0" prefHeight="25.0" prefWidth="313.0" style="-fx-font-size: 20; -fx-font-family: &quot;Marlett&quot;;" text="Impressions CSV:" textFill="#505050" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+         <JFXButton fx:id="serverLogsButton" alignment="CENTER" blendMode="DARKEN" buttonType="RAISED" contentDisplay="TOP" layoutX="439.0" layoutY="65.0" mnemonicParsing="false" onAction="#openServerCSV" prefHeight="35.0" prefWidth="157.0" ripplerFill="#4d2542" style="-fx-font-size: 20; -fx-font-family: &quot;Marlett&quot;; -jfx-button-type: &quot;RAISED&quot;; -fx-background-color: white;" text="Server Logs" textAlignment="CENTER" textFill="#5e5e5e" textOverrun="CLIP" GridPane.columnIndex="2" GridPane.rowIndex="2">
+            <font>
+               <Font name="Marlett" size="11.0" />
+            </font>
+            <cursor>
+               <Cursor fx:constant="HAND" />
+            </cursor>
+            <effect>
+               <Glow />
+            </effect>
+            <GridPane.margin>
+               <Insets bottom="15.0" left="5.0" right="5.0" top="15.0" />
+            </GridPane.margin>
+         </JFXButton>
+         <!--         <Button layoutX="490.0" layoutY="249.0" mnemonicParsing="false" onAction="#openImpressionCSV" prefHeight="25.0" prefWidth="100.0" style="-fx-font-family: &quot;Courier New&quot;;" text="Impression" GridPane.rowIndex="1" />-->
+         <Label fx:id="serverLogsLabel" layoutX="99.0" layoutY="175.0" prefHeight="25.0" prefWidth="313.0" style="-fx-font-size: 20; -fx-font-family: &quot;Marlett&quot;;" text="Server Logs CSV:" textFill="#505050" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+         <JFXButton fx:id="impressionsButton" alignment="CENTER" blendMode="DARKEN" buttonType="RAISED" contentDisplay="TOP" layoutX="60.0" layoutY="65.0" mnemonicParsing="false" onAction="#openImpressionCSV" prefHeight="35.0" prefWidth="157.0" ripplerFill="#4d2542" style="-fx-font-size: 20; -fx-font-family: &quot;Marlett&quot;; -jfx-button-type: &quot;RAISED&quot;; -fx-background-color: white;" text="Impressions" textAlignment="CENTER" textFill="#5e5e5e" textOverrun="CLIP" GridPane.columnIndex="2" GridPane.rowIndex="1">
+            <font>
+               <Font name="Marlett" size="11.0" />
+            </font>
+            <cursor>
+               <Cursor fx:constant="HAND" />
+            </cursor>
+            <effect>
+               <Glow />
+            </effect>
+            <GridPane.margin>
+               <Insets bottom="15.0" left="5.0" right="5.0" top="15.0" />
+            </GridPane.margin>
+         </JFXButton>
+         <columnConstraints>
+            <ColumnConstraints />
+            <ColumnConstraints maxWidth="540.0" minWidth="304.0" prefWidth="304.0" />
+            <ColumnConstraints maxWidth="264.0" minWidth="71.0" prefWidth="163.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+         </rowConstraints>
+      </GridPane>
+      <ProgressBar fx:id="progress" prefHeight="18.0" prefWidth="455.0" progress="0.0" />
+      <HBox alignment="CENTER">
+         <children>
+            <!--         <Button fx:id="loadButton" disable="true" layoutX="459.0" layoutY="384.0" mnemonicParsing="false" onAction="#loadFiles" prefHeight="25.0" prefWidth="100.0" text="Load" GridPane.columnIndex="2" GridPane.rowIndex="4">-->
+            <!--            <GridPane.margin>-->
+            <!--               <Insets bottom="15.0" left="25.0" top="15.0" />-->
+            <!--            </GridPane.margin></Button>-->
+            <JFXButton fx:id="loadButton" alignment="CENTER" blendMode="DARKEN" buttonType="RAISED" contentDisplay="TOP" disable="true" mnemonicParsing="false" onAction="#loadFiles" prefHeight="35.0" prefWidth="157.0" ripplerFill="#4d2542" style="-fx-font-size: 20; -fx-font-family: &quot;Marlett&quot;; -jfx-button-type: &quot;RAISED&quot;; -fx-background-color: white;" text="Load" textAlignment="CENTER" textFill="#5e5e5e" textOverrun="CLIP">
+               <font>
+                  <Font name="Marlett" size="11.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <effect>
+                  <Glow />
+               </effect>
+               <HBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="20.0" />
+               </HBox.margin>
+            </JFXButton>
+            <JFXButton fx:id="clearButton" alignment="CENTER" blendMode="DARKEN" buttonType="RAISED" contentDisplay="TOP" disable="true" mnemonicParsing="false" onAction="#clearSelection" prefHeight="0.0" prefWidth="158.0" ripplerFill="#4d2542" style="-fx-font-size: 20; -fx-font-family: &quot;Marlett&quot;; -jfx-button-type: &quot;RAISED&quot;; -fx-background-color: white;" text="Clear" textAlignment="CENTER" textFill="#5e5e5e" textOverrun="CLIP">
+               <font>
+                  <Font name="Marlett" size="11.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <effect>
+                  <Glow />
+               </effect>
+               <HBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="20.0" />
+               </HBox.margin>
+            </JFXButton>
+         </children>
+      </HBox>
+   </children>
+
+</VBox>

@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXTimePicker?>
+<?import com.jfoenix.controls.JFXToggleButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.CheckMenuItem?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<GridPane alignment="TOP_CENTER" prefHeight="156.0" prefWidth="1053.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Control.JavaFX.FilterGUIControllers.CampaignSummaryFiltersGUIController">
+    <Label fx:id="dateFromLabel" prefHeight="18.0" prefWidth="119.0" text="Date From:" GridPane.columnIndex="1" GridPane.rowIndex="2">
+        <padding>
+            <Insets left="15.0" />
+        </padding>
+        <font>
+            <Font name="Marlett" size="12.0" />
+        </font></Label>
+    <JFXDatePicker fx:id="dateFromPicker" defaultColor="#ff6347" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+    <Label fx:id="dateToLabel" prefHeight="18.0" prefWidth="106.0" text="Date To:" GridPane.columnIndex="3" GridPane.rowIndex="2">
+        <padding>
+            <Insets left="10.0" />
+        </padding>
+        <font>
+            <Font name="Marlett" size="12.0" />
+        </font></Label>
+    <JFXDatePicker fx:id="dateToPicker" defaultColor="#ff6347" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+    <Label GridPane.columnIndex="2" GridPane.rowIndex="3" />
+    <Label fx:id="timeFromLabel" text="Time From:" GridPane.columnIndex="1" GridPane.rowIndex="3">
+        <GridPane.margin>
+            <Insets left="15.0" />
+        </GridPane.margin>
+        <font>
+            <Font size="12.0" />
+        </font></Label>
+    <JFXTimePicker  fx:id="timeFromPicker" prefHeight="26.0" prefWidth="174.0" GridPane.columnIndex="2" GridPane.rowIndex="3"  />
+    <!--    <JFXTextField fx:id="timeFromText" prefHeight="26.0" prefWidth="174.0" text="00:00:00" GridPane.columnIndex="2" GridPane.rowIndex="3" />-->
+    <Label fx:id="timeToLabel" text="Time To:" GridPane.columnIndex="3" GridPane.rowIndex="3">
+        <padding>
+            <Insets left="10.0" />
+        </padding>
+        <font>
+            <Font size="12.0" />
+        </font></Label>
+    <JFXTimePicker fx:id="timeToPicker" prefHeight="26.0" prefWidth="174.0"  GridPane.columnIndex="4" GridPane.rowIndex="3"/>
+    <!--    <JFXTextField fx:id="timeToText" prefHeight="26.0" prefWidth="174.0" text="00:00:00" GridPane.columnIndex="4" GridPane.rowIndex="3" />-->
+    <Label GridPane.columnIndex="2" GridPane.rowIndex="5" />
+    <Label GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+    <Label fx:id="bounceTypeLabel" layoutX="400.0" layoutY="31.0" prefHeight="34.0" prefWidth="102.0" text="Bounce Type:" GridPane.columnIndex="6" GridPane.rowIndex="2">
+        <padding>
+            <Insets left="15.0" />
+        </padding>
+        <font>
+            <Font size="12.0" />
+        </font></Label>
+
+    <JFXRadioButton fx:id="numOfPagesRadio" mnemonicParsing="false" prefHeight="32.0" prefWidth="240.0" style="-jfx-selected-color: #ff6347;" text="Only One Page Viewed" GridPane.columnIndex="7" GridPane.rowIndex="2">
+        <font>
+            <Font name="Marlett" size="12.0" />
+        </font>
+        <toggleGroup>
+            <ToggleGroup fx:id="bounce" />
+        </toggleGroup></JFXRadioButton>
+    <JFXRadioButton fx:id="timeOnSiteRadio" mnemonicParsing="false" prefHeight="60.0" prefWidth="242.0" style="-jfx-selected-color: #ff6347;" text="Amount Of Time Spent On Site" toggleGroup="$bounce" GridPane.columnIndex="7" GridPane.rowIndex="3">
+        <font>
+            <Font name="Marlett" size="12.0" />
+        </font></JFXRadioButton>
+    <MenuBar layoutX="73.0" layoutY="96.0" prefHeight="26.0" prefWidth="297.0" GridPane.columnIndex="7" GridPane.rowIndex="4">
+        <menus>
+            <Menu mnemonicParsing="false" text="Gender">
+                <items>
+                    <CheckMenuItem fx:id="maleMenuItem" mnemonicParsing="false" text="Male" />
+                    <CheckMenuItem fx:id="femaleMenuItem" mnemonicParsing="false" text="Female" />
+                </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Age">
+                <items>
+                    <CheckMenuItem fx:id="age1MenuItem" mnemonicParsing="false" text="&lt;25" />
+                    <CheckMenuItem fx:id="age2MenuItem" mnemonicParsing="false" text="25-34" />
+                    <CheckMenuItem fx:id="age3MenuItem" mnemonicParsing="false" text="35-44" />
+                    <CheckMenuItem fx:id="age4MenuItem" mnemonicParsing="false" text="45-54" />
+                    <CheckMenuItem fx:id="age5MenuItem" mnemonicParsing="false" text="&gt;54" />
+                </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Context">
+                <items>
+                    <CheckMenuItem fx:id="newsMenuItem" mnemonicParsing="false" text="News" />
+                    <CheckMenuItem fx:id="shoppingMenuItem" mnemonicParsing="false" text="Shopping" />
+                    <CheckMenuItem fx:id="socialMediaMenuItem" mnemonicParsing="false" text="Social Media" />
+                    <CheckMenuItem fx:id="blogMenuItem" mnemonicParsing="false" text="Blog" />
+                    <CheckMenuItem fx:id="hobbiesMenuItem" mnemonicParsing="false" text="Hobbies" />
+                    <CheckMenuItem fx:id="travelMenuItem" mnemonicParsing="false" text="Travel" />
+                </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Income">
+                <items>
+                    <CheckMenuItem fx:id="lowMenuItem" mnemonicParsing="false" text="Low" />
+                    <CheckMenuItem fx:id="mediumMenuItem" mnemonicParsing="false" text="Medium" />
+                    <CheckMenuItem fx:id="highMenuItem" mnemonicParsing="false" text="High" />
+                </items>
+            </Menu>
+        </menus>
+    </MenuBar>
+    <columnConstraints>
+        <ColumnConstraints />
+        <ColumnConstraints />
+        <ColumnConstraints />
+        <ColumnConstraints />
+        <ColumnConstraints />
+        <ColumnConstraints />
+        <ColumnConstraints maxWidth="116.0" minWidth="72.0" prefWidth="116.0" />
+        <ColumnConstraints maxWidth="257.0" minWidth="242.0" prefWidth="204.0" />
+        <ColumnConstraints maxWidth="145.0" minWidth="125.0" prefWidth="125.0" />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints />
+        <RowConstraints />
+        <RowConstraints />
+        <RowConstraints />
+        <RowConstraints />
+        <RowConstraints />
+    </rowConstraints>
+    <opaqueInsets>
+        <Insets />
+    </opaqueInsets>
+</GridPane>

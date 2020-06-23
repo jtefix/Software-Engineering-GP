@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<VBox fx:id="campaignSummaryVBox" style="-fx-border-width:25; -fx-border-color:ff6347;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Control.JavaFX.CampaignSummaryGUIController">
+            <fx:include source="FiltersGUI/CampaignSummaryFiltersGUI.fxml" />
+            <Label fx:id="calculationsLabel" prefHeight="356.0" prefWidth="799.0" text="Load Calculations To Start">
+         <font>
+            <Font name="Marlett" size="12.0" />
+         </font>
+         <padding>
+            <Insets bottom="25.0" left="25.0" right="25.0" top="25.0" />
+         </padding></Label>
+      <HBox alignment="CENTER" prefHeight="68.0" prefWidth="800.0">
+         <children>
+                  <JFXButton fx:id="filtersButton" alignment="CENTER" blendMode="DARKEN" buttonType="RAISED" contentDisplay="TOP"  mnemonicParsing="false" onAction="#applyFilters" ripplerFill="#4d2542" style="-fx-font-size: 12; -fx-font-family: &quot;Marlett&quot;; -jfx-button-type: &quot;RAISED&quot;; -fx-background-color: white;" prefHeight="26.0" prefWidth="419.0" text="Apply Filters">
+               <HBox.margin>
+                  <Insets left="25.0" right="25.0" />
+               </HBox.margin>
+            </JFXButton>
+                  <JFXButton fx:id="clearButton" alignment="CENTER" blendMode="DARKEN" buttonType="RAISED" contentDisplay="TOP"  mnemonicParsing="false" onAction="#clearScreen" ripplerFill="#4d2542" style="-fx-font-size: 12; -fx-font-family: &quot;Marlett&quot;; -jfx-button-type: &quot;RAISED&quot;; -fx-background-color: white;" prefHeight="26.0" prefWidth="148.0" text="Clear Screen">
+               <HBox.margin>
+                  <Insets left="25.0" />
+               </HBox.margin>
+            </JFXButton>
+         </children>
+      </HBox>
+</VBox>

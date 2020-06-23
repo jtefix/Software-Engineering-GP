@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXSpinner?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox fx:id="metricsGraphVBox" alignment="CENTER" snapToPixel="false" style="-fx-border-width: 25; -fx-border-color: #ff6347; -fx-border-opacity: 50;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Control.JavaFX.MetricsGraphGUIController">
+
+       <fx:include source="FiltersGUI/MetricsGraphFiltersGUI.fxml" />
+   <Label fx:id="selectedGraphLabel" prefHeight="37.0" prefWidth="998.0" text="Selected Graph is:" />
+   <JFXSpinner fx:id="spinner" visible="false" />
+
+      <LineChart fx:id="lineChart" layoutX="26.0" layoutY="143.0" legendSide="TOP" prefHeight="299.0" prefWidth="1053.0" scaleY="1.1" titleSide="RIGHT" BorderPane.alignment="CENTER">
+        <xAxis>
+          <NumberAxis fx:id="timeAxis" label="Time" prefHeight="53.0" prefWidth="996.0" side="BOTTOM" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis prefHeight="200.0" prefWidth="36.0" side="LEFT" />
+        </yAxis>
+      <padding>
+         <Insets top="30.0" />
+      </padding>
+      <VBox.margin>
+         <Insets />
+      </VBox.margin>
+      </LineChart>
+   <Label fx:id="infoLabel" alignment="CENTER" layoutX="226.0" layoutY="97.0" prefHeight="39.0" prefWidth="404.0" text="Double Click On Graph To See Relevant Filters">
+      <padding>
+         <Insets top="10.0" />
+      </padding>
+      <font>
+         <Font name="Marlett" size="12.0" />
+      </font></Label>
+    <GridPane alignment="CENTER" prefHeight="110.0" prefWidth="1053.0">
+        <JFXButton fx:id="filterButton" alignment="CENTER" blendMode="DARKEN" buttonType="RAISED" contentDisplay="TOP" layoutX="81.0" layoutY="450.0" mnemonicParsing="false" onAction="#drawGraph" prefHeight="26.0" prefWidth="136.0" ripplerFill="#4d2542" style="-fx-font-size: 14; -jfx-button-type: &quot;RAISED&quot;; -fx-background-color: white;" text="Create Graph" textAlignment="CENTER" textFill="#5e5e5e" GridPane.columnIndex="5" GridPane.rowIndex="1">
+            <padding>
+                <Insets left="20.0" />
+            </padding></JFXButton>
+        <JFXComboBox fx:id="calculationCombo" focusColor="#ff6347" layoutX="81.0" layoutY="416.0" prefHeight="26.0" prefWidth="361.0" promptText="Choose Metric" style="-fx-font-style: &quot;Marlett&quot;;" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+        <JFXButton fx:id="clearButton" alignment="CENTER" blendMode="DARKEN" buttonType="RAISED" contentDisplay="TOP" layoutX="543.0" layoutY="450.0" mnemonicParsing="false" onAction="#clearGraphs" prefHeight="26.0" prefWidth="134.0" ripplerFill="#4d2542" style="-fx-font-size: 14; -jfx-button-type: &quot;RAISED&quot;; -fx-background-color: white;" text="Clear All Graphs" textAlignment="CENTER" textFill="#5e5e5e" GridPane.columnIndex="5" GridPane.rowIndex="2">
+            <padding>
+                <Insets left="20.0" />
+            </padding></JFXButton>
+        <JFXComboBox fx:id="granularityCombo" layoutX="544.0" layoutY="416.0" onAction="#clearGraphs" prefHeight="26.0" prefWidth="360.0" promptText="Granularity" style="-fx-font-style: &quot;Marlett&quot;;" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+        <Label text="" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+        <Label text="" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+        <JFXTextField fx:id="graphNameField" prefHeight="25.0" prefWidth="244.0" text="Graph 0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+      <columnConstraints>
+         <ColumnConstraints />
+         <ColumnConstraints />
+         <ColumnConstraints maxWidth="29.0" minWidth="0.0" prefWidth="29.0" />
+         <ColumnConstraints maxWidth="361.0" minWidth="332.0" prefWidth="332.0" />
+         <ColumnConstraints maxWidth="36.0" minWidth="7.0" prefWidth="36.0" />
+         <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" maxWidth="127.0" minWidth="150.0" prefWidth="98.0" />
+      </columnConstraints>
+      <rowConstraints>
+         <RowConstraints />
+         <RowConstraints minHeight="50.0" />
+         <RowConstraints minHeight="40.0" />
+         <RowConstraints />
+      </rowConstraints>
+    </GridPane>
+
+</VBox>

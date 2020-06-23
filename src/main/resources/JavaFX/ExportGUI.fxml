@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<!--<VBox fx:id="importVBox" alignment="CENTER" snapToPixel="false" style="-fx-border-width: 25; -fx-border-color: ff6347; -fx-border-opacity: 50;" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Control.JavaFX.ImportGUIController">-->
+
+<VBox fx:id="exportVBox" alignment="CENTER" snapToPixel="false" style="-fx-border-width: 25; -fx-border-color: ff6347; -fx-border-opacity: 50;" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Control.JavaFX.ExportGUIController">
+         <children>
+            <Label fx:id="logLabel" textFill="#494949" prefHeight="90.0" prefWidth="458.0" text="" >
+            <font>
+               <Font name="Marlett" size="20.0" />
+            </font></Label>
+      <JFXSpinner fx:id="spinner" visible="false"/>
+            <Label prefHeight="40.0" text="Export Current Calculations, Graphs and Histogram as CSVs." textFill="#494949">
+         <font>
+            <Font name="Marlett" size="20.0" />
+         </font></Label>
+            <Label prefHeight="40.0" prefWidth="659.0" text="Warning: Writing could take a few minutes depending on size of database." textFill="#494949">
+         <font>
+            <Font name="Marlett" size="20.0" />
+         </font></Label>
+            <ProgressBar fx:id="progressBar" prefHeight="26.0" prefWidth="394.0" progress="0.0">
+         <padding>
+            <Insets top="5.0" />
+         </padding>
+         <VBox.margin>
+            <Insets bottom="15.0" top="15.0" />
+         </VBox.margin></ProgressBar>
+            <HBox alignment="CENTER" prefHeight="97.0" prefWidth="659.0">
+               <children>
+                  <JFXButton fx:id="choosePathButton" mnemonicParsing="false" onAction="#chooseExportLocation" ripplerFill="#4d2542" style="-fx-font-size: 20; -fx-font-family: &quot;Marlett&quot;; -jfx-button-type: &quot;RAISED&quot;; -fx-background-color: white;" text="Change Location" textFill="#515151">
+               <HBox.margin>
+                  <Insets right="15.0" />
+               </HBox.margin></JFXButton>
+                  <JFXButton fx:id="exportButton" disable="true" mnemonicParsing="false" onAction="#exportData" prefHeight="26.0" prefWidth="162.0" ripplerFill="#4d2542" style="-fx-font-size: 20; -fx-font-family: &quot;Marlett&quot;; -jfx-button-type: &quot;RAISED&quot;; -fx-background-color: white;" text="Export Data" textFill="#494949">
+               <font>
+                  <Font name="Marlett" size="20.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="15.0" right="15.0" />
+               </HBox.margin>
+                  </JFXButton>
+                  <JFXButton fx:id="exportGraphicsButton" disable="true" mnemonicParsing="false" onAction="#exportGraphs" prefHeight="26.0" prefWidth="162.0" ripplerFill="#4d2542" style="-fx-font-size: 20; -fx-font-family: &quot;Marlett&quot;; -jfx-button-type: &quot;RAISED&quot;; -fx-background-color: white;" text="Export Graphs" textAlignment="CENTER" textFill="#494949">
+               <font>
+                  <Font name="Marlett" size="20.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="15.0" />
+               </HBox.margin>
+            </JFXButton>
+               </children>
+         <VBox.margin>
+            <Insets bottom="40.0" />
+         </VBox.margin>
+            </HBox>
+            <Label fx:id="pathLabel" text="Load Location:" textFill="#494949">
+         <font>
+            <Font name="Marlett" size="20.0" />
+         </font>
+         <padding>
+            <Insets bottom="15.0" />
+         </padding>
+      </Label>
+         </children>
+</VBox>
